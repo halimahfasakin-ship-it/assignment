@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    
+    <div class="calc">
+        <input type="text" name="" id="inp" disabled> <br><br>
+        <div class="you">
+            <div class="numbers">
+                <button onclick="clickme()">(</button>
+                <button onclick="clickme()">)</button>
+                <button onclick="clickme(9)">%</button>
+                <button onclick="clickme(9)">9</button>
+                <button onclick="clickme(8)">8</button>
+                <button onclick="clickme(7)">7</button>
+                <button onclick="clickme(4)">4</button>
+                <button onclick="clickme(5)">5</button>
+                <button onclick="clickme(6)">6</button>
+                <button onclick="clickme(1)">1</button>
+                <button onclick="clickme(2)">2</button>
+                <button onclick="clickme(3)">3</button>
+                <button onclick="clickme(0)">0</button>
+                <button onclick="clickme('.')">.</button>
+                <button onclick="solve()"> = </button>
+            </div>
+
+            
+            <div class="texts">
+                <button onclick="clickme('+')">+</button>
+                <button onclick="clickme('-')">-</button>
+                <button onclick="clickme('*')">x</button>
+                <button onclick="clickme('/')">/</button>
+                <button onclick="clear_button()">AC</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function clickme(num){
+            inp.value+= num
+        }
+
+        function solve(){
+            console.log(inp.value)
+
+            let answer = eval(inp.value)
+            inp.value = answer
+
+        }
+
+        function clear_button(){
+            let clean = ""
+            inp.value = clean
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <textarea name="" id="inp" placeholder="type your text here" onkeyup="check_words()"></textarea> <br>
+    <code id="code">0
+        <span>word(s)</span>
+    </code>
+    <a href="calculator.html">Calculator</a>
+    <script>
+        let my_name = String("  Fasakin   Halimah")
+        console.log(my_name.length); //to get the lenght of the string above and also it starts counting from 1
+        
+        console.log(my_name.charAt(5));
+
+        console.log(my_name.concat("    Afolashade"));
+        
+        console.log(my_name.includes('y'));
+
+        console.log(my_name.trim());
+
+        console.log(my_name.split(''));
+        
+        
+        function check_words(){
+            console.log(inp.value.trim().split(/\s+/));
+            let me=inp.value.trim().split(/\s+/)
+            let i= 'word(s)'
+            code.innerHTML=  me.length +`${i}`
+        }
+        
+    </script>
+</body>
+</html>
