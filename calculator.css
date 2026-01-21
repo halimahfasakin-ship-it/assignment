@@ -64,7 +64,8 @@
 
 @media (min-width: 320px) {
     .calc {
-        width: 320px;
+        width: 330px;
+        justify-self: center;
     }
     .calc input{
         width: 310px;
